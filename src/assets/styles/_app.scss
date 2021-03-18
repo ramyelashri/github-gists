@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "assets/styles/overrides";
+@import "assets/styles/breakpoints";
+@import "assets/styles/typography";
+@import "assets/styles/global";
+
+*:focus {outline:none !important}
+iframe[name^="checkout-frames"] {
+  /* Fix auto fill color bug in credit card number frame */
+  height: 55px !important;
+  border-radius: 6px;
+}
+

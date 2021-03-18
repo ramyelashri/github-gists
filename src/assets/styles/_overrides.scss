@@ -1,0 +1,16 @@
+@import "assets/styles/breakpoints";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.MuiButton-root,
+.MuiTab-root {
+  text-transform: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}

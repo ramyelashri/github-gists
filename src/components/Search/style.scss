@@ -1,0 +1,48 @@
+@import "assets/styles/breakpoints";
+
+.Search {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.Search__gist {
+  border-top: 2px dashed #333;
+  padding: 10px 5px;
+}
+
+.Search__title {
+  text-align: center;
+}
+
+.Search__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * {
+    margin-bottom: 15px;
+  }
+}
+
+.Search__forks {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+}
+
+.Search__forker-image {
+  max-width: 30px;
+  margin-right: 10px;
+}
+
+.Search__forks-title {
+  margin-top: 10px;
+}
+
+.Search__fork-item {
+  margin-top: 5px;
+}

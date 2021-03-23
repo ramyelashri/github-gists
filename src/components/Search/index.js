@@ -15,7 +15,6 @@ class Search extends React.Component {
       loading: false,
       fetched: false,
       items: null,
-      currentPage: 0,
     };
   }
 
@@ -33,9 +32,10 @@ class Search extends React.Component {
     if(username !== '') {
       this.setState({ loading: true, error: null, fetched: false })
       const resultsPerPage = 10;
-      const gistsUrl = `https://api.github.com/users/${username}/gists??access_token=${this.githubToken}&per_page=${resultsPerPage}&page=${currentPage}`;
+      const gistsUrl = `https://api.github.com/users/${username}/gists??access_token=${this.githubToken}`;
       axios.get(gistsUrl)
         .then(response => {
+          console.log(response, 'response')
           axios.all(response.data.map(gist => {
             return axios.get(`${gist.forks_url}??access_token=64eca3787a12c5c054476f7bc9e383b5624a94d0&per_page=3`)
               .then(response => {

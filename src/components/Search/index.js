@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import Link from '@material-ui/core/Link';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './style.scss';
 
 class Search extends React.Component {
@@ -73,8 +74,10 @@ class Search extends React.Component {
         </div>
 
         <div>
-          {loading &&
-            <div>loading...</div>
+          {1 == 1 &&
+            <div className="Search__loader">
+              <CircularProgress/>
+            </div>
           }
           {!loading && error &&
           <div>No such username found, please try again</div>
@@ -85,7 +88,7 @@ class Search extends React.Component {
             {items.length === 0 ?
               <div>No gists found</div>
               :
-              <ul>
+              <div>
                 {items.map((item, index) => {
                   return (
                     <div className="Search__gist" key={index}>
@@ -133,7 +136,7 @@ class Search extends React.Component {
                     </div>
                   )
                 })}
-              </ul>
+              </div>
             }
           </div>
           }

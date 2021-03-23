@@ -9,6 +9,13 @@
   margin: 50px auto;
 }
 
+.Search__loader {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .Search__gist {
   border: 1px solid #fde6e6;
   padding: 15px;

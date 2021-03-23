@@ -74,7 +74,7 @@ class Search extends React.Component {
         </div>
 
         <div>
-          {1 == 1 &&
+          {loading &&
             <div className="Search__loader">
               <CircularProgress/>
             </div>

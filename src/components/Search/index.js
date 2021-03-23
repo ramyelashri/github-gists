@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
+import Link from '@material-ui/core/Link';
 import './style.scss';
 
 class Search extends React.Component {
@@ -56,6 +57,9 @@ class Search extends React.Component {
     const { loading, items, error, fetched } = this.state
     return (
       <div className="Search">
+        <h1 className="Search__title">
+          Github Username
+        </h1>
         <div>
           <form className="Search__form" onSubmit={this.handleSubmit} noValidate autoComplete="off">
             <div>
@@ -88,7 +92,7 @@ class Search extends React.Component {
                       <span className="Global__bold">
                         Gist name:&nbsp;
                       </span>
-                      <a href="{item.html_url}">{Object.keys(item.files)[0]}</a>
+                      <Link className="Search__gist-link" target="_blank" href="{item.html_url}">{Object.keys(item.files)[0]}</Link>
                       <div>
                         <span className="Global__bold">Tags:</span>&nbsp;
                         {Object.keys(item.files).map((file, index) => (

@@ -8,17 +8,19 @@ import MenuIcon from '@material-ui/icons/Menu';
 const MainLayout = ({children}) => {
   return (
     <>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start"  color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6">
-            🔥 Github Gists App
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main>{children}</main>
+      <div className="Global__main-container">
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton edge="start"  color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6">
+              🔥 Github Gists App
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <main>{children}</main>
+      </div>
     </>
   )
 }
